@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+    }
+    input[type="email"] {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .confirmation-message {
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Recuperar Senha</h2>
+    <form id="recovery-form">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="confirmation-message" style="display: none;">Um e-mail foi enviado com instruções para redefinir a senha.</p>
+  </div>
+
+  <script>
+    document.getElementById('recovery-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var email = document.getElementById('email').value;
+
+      setTimeout(function() {
+        document.querySelector('.confirmation-message').style.display = 'block';
+      }, 1000); 
+    });
+  </script>
+</body>
+</html>

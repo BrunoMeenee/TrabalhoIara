@@ -48,5 +48,3 @@ Na tela principal, o usuário pode acessar outras funcionalidades, como atualiza
 Esta é uma visão geral básica das regras de negócio e da navegação entre as telas do projeto. Dependendo das necessidades específicas do sistema, esses aspectos podem ser expandidos e detalhados ainda mais.
 
 
-
-
